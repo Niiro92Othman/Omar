@@ -29,7 +29,29 @@
     }
     main {
       padding: 2rem;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .intro {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      max-width: 900px;
+      gap: 2rem;
+    }
+    .intro img {
+      max-width: 200px;
+      border-radius: 12px;
+    }
+    .bio {
+      max-width: 600px;
+      text-align: left;
+    }
+    h1, h2 {
+      color: #66ff66;
     }
   </style>
 </head>
@@ -45,8 +67,15 @@
     <a href="spotify.html">Spotify / Goblin M0D3</a>
   </nav>
   <main>
-    <h1>Welcome to Goblin M0D3</h1>
-    <p>This is your chaotic hub of tech, creativity, and nerdy brilliance.</p>
+    <div class="intro">
+      <img src="photo_2022-09-27_22-55-32 (4).jpg" alt="Omar A. Othman">
+      <div class="bio">
+        <h1>Omar A. Othman</h1>
+        <p>IT Technical Manager based in Riyadh, KSA — a digital craftsman blending experience, curiosity, and chaos. With over 15 years in IT, I specialize in managing service desks, end-user support, asset governance, and incident response across critical industries like banking and aviation. Outside the corporate grind, I geek out over World of Warcraft, heavy metal, and 3D printing weird stuff nobody asked for.</p>
+        <h2>About This Project</h2>
+        <p><strong>Goblin M0D3</strong> is my digital lair. It's a living archive of my resume, blog posts, 3D prints, World of Warcraft adventures, reviews, and technical notes. Built from scratch in HTML and hosted with chaos energy, it's where I dump everything I’m proud of — and everything I’ve broken and fixed along the way.</p>
+      </div>
+    </div>
   </main>
 </body>
 </html>
