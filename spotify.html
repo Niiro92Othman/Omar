@@ -3,229 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GOBLIN_M0D3</title>
+  <title>Spotify / Goblin M0D3</title>
   <style>
     body {
-      font-family: monospace;
-      background-color: #111;
-      color: #eee;
       margin: 0;
-      padding: 0;
+      background-color: #0e0e0e;
+      color: #f0f0f0;
+      font-family: Arial, sans-serif;
     }
-    #toggleSidebar {
-      position: fixed;
-      top: 20px;
-      left: 0;
-      z-index: 999;
-      background-color: #222;
-      color: #fff;
-      padding: 8px 10px;
-      cursor: pointer;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-    #toc {
-      position: fixed;
-      top: 60px;
-      left: 0;
+    nav {
       background-color: #1a1a1a;
-      color: white;
-      padding: 10px;
-      z-index: 998;
-      max-height: 90vh;
-      overflow-y: auto;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
     }
-    #toc.hidden {
-      display: none;
-    }
-    #visitorCounter {
-      position: fixed;
-      bottom: 10px;
-      left: 10px;
-      z-index: 999;
-      background-color: #333;
-      color: #fff;
-      padding: 6px 10px;
-      font-size: 0.9rem;
-      border-radius: 5px;
-    }
-    #suggestBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-      background-color: #1db954;
-      color: white;
-      font-size: 1rem;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    #suggestModal {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1000;
-      background: #222;
-      padding: 20px;
-      border-radius: 10px;
-      color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      width: 90%;
-      max-width: 400px;
-    }
-    #suggestModal input {
-      display: block;
-      margin-bottom: 10px;
-      width: 100%;
-      padding: 8px;
-      border: none;
-      border-radius: 4px;
-    }
-    #suggestModal button {
-      padding: 8px 12px;
-      border: none;
-      border-radius: 4px;
-      background: #1db954;
-      color: white;
-      cursor: pointer;
-      margin-right: 10px;
-    }
-    #toc ul li a {
-      color: #0af;
+    nav a {
+      color: #66ff66;
       text-decoration: none;
-    }
-    #toc ul li a:hover {
-      text-decoration: underline;
-    }
-    .track-section {
-      padding: 2rem;
-    }
-    .track {
-      margin-bottom: 1rem;
-    }
-    .track-title {
       font-weight: bold;
     }
-    .track-artist {
-      font-style: italic;
+    nav a:hover {
+      color: #ff3333;
     }
-    .track-links a {
-      color: #1db954;
-      margin-right: 10px;
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+    h1 {
+      color: #66ff66;
+      margin-bottom: 2rem;
+    }
+    iframe {
+      border: none;
+      border-radius: 12px;
+      margin: 2rem auto;
+    }
+    .youtube {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+    }
+    .spotify {
+      width: 100%;
+      max-width: 800px;
+      height: 352px;
     }
   </style>
 </head>
 <body>
-<div id="toggleSidebar">☰ TOC</div>
-<div id="toc" class="hidden">
-  <p><strong>Genres</strong></p>
-  <ul>
-    <li><a href="#genre-metal">Metal</a></li>
-    <li><a href="#genre-electronic">Electronic</a></li>
-    <li><a href="#genre-rock">Rock</a></li>
-    <li><a href="#genre-chill">Chill</a></li>
-    <li><a href="#genre-user">User Recommendation!</a></li>
-  </ul>
-</div>
-<div id="visitorCounter">Visitors: <span id="visitorCount">...</span></div>
-<div id="suggestBtn">➕ Suggest Track</div>
-<div id="suggestModal">
-  <h3>Suggest a Track</h3>
-  <input type="text" id="suggestTitle" placeholder="Track Title">
-  <input type="text" id="suggestArtist" placeholder="Artist Name">
-  <input type="text" id="suggestGenre" placeholder="Genre">
-  <input type="text" id="suggestSpotify" placeholder="Spotify Link">
-  <input type="text" id="suggestYouTube" placeholder="YouTube Link">
-  <button onclick="submitSuggestion()">Submit</button>
-  <button onclick="document.getElementById('suggestModal').style.display='none'">Cancel</button>
-</div>
+  <nav>
+    <a href="index.html">Home / About Me</a>
+    <a href="resume.html">Resume</a>
+    <a href="blog.html">Blog</a>
+    <a href="projects.html">Projects / Notes</a>
+    <a href="prints.html">3D Print Archive</a>
+    <a href="wow.html">WoW Gallery</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="spotify.html">Spotify / Goblin M0D3</a>
+  </nav>
+  <main>
+    <h1>Goblin M0D3 – Music Portal</h1>
 
-<!-- genre sections would be here -->
-<div id="genre-metal" class="track-section">
-  <h2>Metal</h2>
-  <div class="track">
-    <div class="track-title">Flesh & Metal</div>
-    <div class="track-artist">Mick Gordon</div>
-    <div class="track-links">
-      <a href="https://youtube.com" target="_blank">YouTube</a>
-      <a href="https://spotify.com" target="_blank">Spotify</a>
-    </div>
-  </div>
-</div>
-<div id="genre-electronic" class="track-section">
-  <h2>Electronic</h2>
-  <div class="track">
-    <div class="track-title">Dreamin' On</div>
-    <div class="track-artist">MJ</div>
-    <div class="track-links">
-      <a href="#">YouTube</a>
-      <a href="#">Spotify</a>
-    </div>
-  </div>
-</div>
-<div id="genre-rock" class="track-section">
-  <h2>Rock</h2>
-  <div class="track">
-    <div class="track-title">Knights of Cydonia</div>
-    <div class="track-artist">Muse</div>
-    <div class="track-links">
-      <a href="#">YouTube</a>
-      <a href="#">Spotify</a>
-    </div>
-  </div>
-</div>
-<div id="genre-chill" class="track-section">
-  <h2>Chill</h2>
-  <div class="track">
-    <div class="track-title">Midnight City</div>
-    <div class="track-artist">M83</div>
-    <div class="track-links">
-      <a href="#">YouTube</a>
-      <a href="#">Spotify</a>
-    </div>
-  </div>
-</div>
-<div id="genre-user" class="track-section">
-  <h2>User Recommendation!</h2>
-  <p>No user-submitted tracks yet.</p>
-</div>
+    <iframe class="youtube" src="https://www.youtube.com/embed/videoseries?list=PLiEexr1iIGuw90f4SuRpAofKKm9iNleP5" allowfullscreen></iframe>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggleBtn = document.getElementById("toggleSidebar");
-    const sidebar = document.getElementById("toc");
-    toggleBtn.addEventListener("click", function () {
-      if (sidebar) sidebar.classList.toggle("hidden");
-    });
+    <iframe class="spotify" src="https://open.spotify.com/embed/playlist/37i9dQZF1EpfhvqSkEo6zw?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-    document.getElementById("suggestBtn").addEventListener("click", function () {
-      document.getElementById("suggestModal").style.display = "block";
-    });
-
-    let visitorId = localStorage.getItem("visitorId");
-    if (!visitorId) {
-      visitorId = Date.now() + Math.random().toString(36).substr(2);
-      localStorage.setItem("visitorId", visitorId);
-    }
-    fetch("https://api.countapi.xyz/hit/goblinmod3/" + visitorId)
-      .then(response => response.json())
-      .then(data => {
-        fetch("https://api.countapi.xyz/get/goblinmod3/all")
-          .then(r => r.json())
-          .then(count => {
-            document.getElementById("visitorCount").textContent = count.value;
-          });
-      });
-  });
-
-  function submitSuggestion() {
-    alert("Thanks for your suggestion! The goblin overlord will review it.");
-    document.getElementById('suggestModal').style.display = 'none';
-  }
-</script>
+    <p style="margin-top: 2rem;">
+      You can also view my full profile here:
+      <a href="https://open.spotify.com/user/eokg1jiqqcuoxty4afgpo196y" style="color: #66ff66;" target="_blank">Spotify – eokg1jiqqcuoxty4afgpo196y</a>
+    </p>
+  </main>
 </body>
 </html>
