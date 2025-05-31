@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #0e0e0e;
       color: #f0f0f0;
     }
@@ -18,11 +18,13 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
     nav a {
       color: #66ff66;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
     }
     nav a:hover {
       color: #ff3333;
@@ -32,9 +34,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      max-width: 1200px;
+      margin: auto;
     }
     .welcome {
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: #ff3333;
       text-align: center;
       margin-bottom: 2rem;
@@ -45,19 +49,45 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      max-width: 900px;
       gap: 2rem;
-    }
-    .intro img {
-      max-width: 400px;
+      background-color: #1a1a1a;
+      padding: 2rem;
       border-radius: 12px;
     }
+    .intro img {
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    }
     .bio {
-      max-width: 800px;
+      max-width: 600px;
       text-align: left;
     }
     h1, h2 {
       color: #66ff66;
+      margin-bottom: 0.5rem;
+    }
+    .external-links {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .external-links h2 {
+      color: #66ffcc;
+    }
+    .external-links a {
+      display: inline-block;
+      margin: 0.5rem 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #1a1a1a;
+      color: #66ff66;
+      text-decoration: none;
+      border: 1px solid #444;
+      border-radius: 8px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .external-links a:hover {
+      background-color: #66ff66;
+      color: #0e0e0e;
     }
   </style>
 </head>
@@ -83,13 +113,12 @@
         <p><strong>Goblin M0D3</strong> is my digital lair. It's a living archive of my resume, blog posts, 3D prints, World of Warcraft adventures, reviews, and technical notes. Built from scratch in HTML and hosted with chaos energy, it's where I dump everything I’m proud of — and everything I’ve broken and fixed along the way.</p>
       </div>
     </div>
- <div class="external-links">
+    <div class="external-links">
       <h2>More of My Stuff</h2>
       <a href="https://open.spotify.com/user/eokg1jiqqcuoxty4afgpo196y" target="_blank">Spotify Profile</a>
       <a href="https://www.linkedin.com/in/oaothman/" target="_blank">LinkedIn Profile</a>
       <a href="https://nerdana.com/" target="_blank">Nerdana Store</a>
       <a href="https://github.com/Niiro92Othman" target="_blank">GitHub Projects</a>
-      
     </div>
   </main>
 </body>
