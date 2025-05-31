@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Goblin M0D3</title>
+  <title>Bahamüt – WoW D&D Character Sheet</title>
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
       background-color: #0e0e0e;
       color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
     nav {
       background-color: #1a1a1a;
@@ -29,35 +30,59 @@
     }
     main {
       padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .welcome {
-      font-size: 2rem;
-      color: #ff3333;
+      max-width: 1000px;
+      margin: auto;
       text-align: center;
+    }
+    .avatar {
+      max-width: 200px;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      border: 2px solid #ccc;
+    }
+    h1 a {
+      font-size: 2.5rem;
+      color: #ffcc00;
+      text-decoration: none;
+    }
+    h1 a:hover {
+      color: #ffaa00;
+    }
+    .char-meta {
+      font-weight: bold;
       margin-bottom: 2rem;
     }
-    .intro {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      max-width: 900px;
-      gap: 2rem;
-    }
-    .intro img {
-      max-width: 200px;
+    .char-details {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #1a1a1a;
+      padding: 1rem;
       border-radius: 12px;
     }
-    .bio {
-      max-width: 600px;
-      text-align: left;
-    }
-    h1, h2 {
+    .char-details a {
+      display: block;
       color: #66ff66;
+      text-decoration: none;
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+    .char-details a:hover {
+      color: #ff3333;
+    }
+    .external-links {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #444;
+    }
+    .external-links a {
+      display: inline-block;
+      margin: 0.5rem 1rem;
+      color: #66ffcc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .external-links a:hover {
+      color: #ffcc00;
     }
   </style>
 </head>
@@ -73,15 +98,29 @@
     <a href="spotify.html">Spotify / Goblin M0D3</a>
   </nav>
   <main>
-    <div class="welcome">Welcome to Goblin M0D3 — where structured chaos powers creativity.</div>
-    <div class="intro">
-      <img src="photo_2022-09-27_22-55-32 (4).jpg" alt="Omar A. Othman">
-      <div class="bio">
-        <h1>Omar A. Othman<br><span style="font-size: 1rem; color: #aaa;">عمر أحمد عثمان</span></h1>
-        <p>IT Technical Manager based in Riyadh, KSA — a digital craftsman blending experience, curiosity, and chaos. With over 15 years in IT, I specialize in managing service desks, end-user support, asset governance, and incident response across critical industries like banking and aviation. Outside the corporate grind, I geek out over World of Warcraft, heavy metal, and 3D printing weird stuff nobody asked for.</p>
-        <h2>About This Project</h2>
-        <p><strong>Goblin M0D3</strong> is my digital lair. It's a living archive of my resume, blog posts, 3D prints, World of Warcraft adventures, reviews, and technical notes. Built from scratch in HTML and hosted with chaos energy, it's where I dump everything I’m proud of — and everything I’ve broken and fixed along the way.</p>
-      </div>
+    <a href="https://www.wowhead.com/list=208562141/eu-kazzak-bahamut" target="_blank">
+      <img src="bahamut-avatar.png" alt="Bahamut Avatar" class="avatar">
+    </a>
+    <h1><a href="https://www.wowhead.com/list=208562141/eu-kazzak-bahamut" target="_blank">Bahamüt</a></h1>
+    <p class="char-meta">Race: Tauren • Class: Fury Warrior • Realm: Kazzak-EU</p>
+
+    <div class="char-details">
+      <a href="https://www.wowhead.com/list=208562141/eu-kazzak-bahamut" target="_blank">🧪 Equipment & Stats</a>
+      <a href="https://www.wowhead.com/achievements/characters/eu/kazzak/bahamut" target="_blank">🏆 Achievements</a>
+      <a href="https://www.wowhead.com/mounts/characters/eu/kazzak/bahamut" target="_blank">🐺 Mount Collection</a>
+      <a href="https://www.wowhead.com/pets/characters/eu/kazzak/bahamut" target="_blank">🧬 Battle Pets</a>
+      <a href="https://www.wowhead.com/transmog/characters/eu/kazzak/bahamut" target="_blank">🎭 Transmog Sets</a>
+      <a href="https://www.wowhead.com/raids/characters/eu/kazzak/bahamut" target="_blank">⚔️ Raid Progress</a>
+      <a href="https://www.wowhead.com/mythic-plus/characters/eu/kazzak/bahamut" target="_blank">💀 Mythic+ Rating</a>
+    </div>
+
+    <div class="external-links">
+      <h2>More of My Stuff</h2>
+      <a href="https://open.spotify.com/user/eokg1jiqqcuoxty4afgpo196y" target="_blank">Spotify Profile</a>
+      <a href="https://www.youtube.com/@Bahamutech" target="_blank">YouTube Channel</a>
+      <a href="https://nerdana.com/" target="_blank">Nerdana Store</a>
+      <a href="https://github.com/Niiro92Othman" target="_blank">GitHub Projects</a>
+      <a href="https://www.threads.net/@bahamut_othman" target="_blank">Threads</a>
     </div>
   </main>
 </body>
