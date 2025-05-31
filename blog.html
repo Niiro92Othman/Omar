@@ -38,25 +38,38 @@
       text-align: center;
       margin-bottom: 2rem;
     }
-    .rss-feed {
+    .blog-list {
       display: grid;
       gap: 2rem;
     }
-    .rss-item {
+    .blog-card {
+      display: flex;
+      gap: 1rem;
       background-color: #1a1a1a;
       border: 1px solid #333;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .blog-card img {
+      width: 150px;
+      height: auto;
+      object-fit: cover;
+    }
+    .blog-content {
       padding: 1rem;
-      border-radius: 8px;
     }
-    .rss-item a {
+    .blog-content h2 {
+      margin: 0 0 0.5rem 0;
+    }
+    .blog-content a {
       color: #66ff66;
-      font-size: 1.2rem;
       text-decoration: none;
+      font-size: 1.2rem;
     }
-    .rss-item a:hover {
+    .blog-content a:hover {
       color: #ff3333;
     }
-    .rss-item p {
+    .blog-content p {
       color: #aaa;
     }
   </style>
@@ -75,34 +88,34 @@
 
   <main>
     <h1>Latest Articles by Omar A. Othman</h1>
-    <div class="rss-feed" id="rss-feed">
-      <p>Loading articles from LinkedIn...</p>
+    <div class="blog-list" id="blog-list">
+      <p>Loading your goblin knowledge drops...</p>
     </div>
   </main>
 
   <script>
-    async function loadRSS() {
-      const rssFeedContainer = document.getElementById("rss-feed");
-      try {
-        const response = await fetch("https://api.rss2json.com/v1/api.json?rss_url=https://rss.app/feeds/MFJVLlM6vXwVNwHJ.xml");
-        const data = await response.json();
-        rssFeedContainer.innerHTML = "";
-        data.items.forEach(item => {
-          const article = document.createElement("div");
-          article.className = "rss-item";
-          article.innerHTML = `
-            <a href="${item.link}" target="_blank">${item.title}</a>
-            <p>${item.description}</p>
+    fetch('articles.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('blog-list');
+        container.innerHTML = '';
+        data.forEach(article => {
+          const card = document.createElement('div');
+          card.className = 'blog-card';
+          card.innerHTML = `
+            <img src="${article.thumbnail}" alt="Thumbnail">
+            <div class="blog-content">
+              <h2><a href="${article.url}" target="_blank">${article.title}</a></h2>
+              <p>${article.description}</p>
+            </div>
           `;
-          rssFeedContainer.appendChild(article);
+          container.appendChild(card);
         });
-      } catch (error) {
-        rssFeedContainer.innerHTML = "<p style='color: red;'>Failed to load articles. Please try again later.</p>";
-        console.error("RSS Load Error:", error);
-      }
-    }
-
-    loadRSS();
+      })
+      .catch(err => {
+        document.getElementById('blog-list').innerHTML = '<p style="color: red;">Failed to load articles.</p>';
+        console.error(err);
+      });
   </script>
 </body>
 </html>
