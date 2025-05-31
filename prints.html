@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Print Archive - Goblin M0D3</title>
+  <style>
+    body {
+      background-color: #0e0e0e;
+      color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    nav a {
+      color: #66ff66;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ff3333;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    h1 {
+      color: #66ff66;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .print-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .print-card {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .print-card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .print-content {
+      padding: 1rem;
+    }
+    .print-content h2 {
+      margin-top: 0;
+      color: #66ff66;
+      font-size: 1.2rem;
+    }
+    .print-content p {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home / About Me</a>
+    <a href="resume.html">Resume</a>
+    <a href="blog.html">Blog</a>
+    <a href="projects.html">Projects / Notes</a>
+    <a href="prints.html">3D Print Archive</a>
+    <a href="wow.html">WoW Gallery</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="spotify.html">Spotify / Goblin M0D3</a>
+  </nav>
+
+  <main>
+    <h1>3D Print Archive</h1>
+    <div class="print-grid">
+      <div class="print-card">
+        <img src="https://nerdana.com/files/theme/nerdana/products/smiley-skull.jpg" alt="Smiley Skull Keychain">
+        <div class="print-content">
+          <h2>Smiley Skull Keychain</h2>
+          <p>Simple but bold skull design for everyday use. Makes a great edgy charm.</p>
+        </div>
+      </div>
+      <div class="print-card">
+        <img src="https://nerdana.com/files/theme/nerdana/products/d20-set.jpg" alt="Resin-Cast D20 Dice Set">
+        <div class="print-content">
+          <h2>D20 Dice Set</h2>
+          <p>For tabletop warriors and DnD addicts — precision-printed polyhedral dice.</p>
+        </div>
+      </div>
+      <div class="print-card">
+        <img src="https://nerdana.com/files/theme/nerdana/products/cybercat.jpg" alt="CyberCat Figurine">
+        <div class="print-content">
+          <h2>CyberCat Figurine</h2>
+          <p>A sleek cyberpunk-style feline guardian. Resin printed, fine-detailed, and badass.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
