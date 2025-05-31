@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Spotify / Goblin M0D3</title>
   <style>
     body {
-      margin: 0;
       background-color: #0e0e0e;
       color: #f0f0f0;
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
     nav {
       background-color: #1a1a1a;
@@ -29,28 +30,34 @@
     }
     main {
       padding: 2rem;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       text-align: center;
     }
-    h1 {
-      color: #66ff66;
-      margin-bottom: 2rem;
-    }
     iframe {
-      border: none;
+      margin-top: 2rem;
       border-radius: 12px;
-      margin: 2rem auto;
+      width: 100%;
+      max-width: 800px;
     }
     .youtube {
-      width: 100%;
-      max-width: 560px;
       height: 315px;
     }
     .spotify {
-      width: 100%;
-      max-width: 800px;
       height: 352px;
+    }
+    h1 {
+      color: #66ff66;
+    }
+    .profile-link {
+      margin-top: 1rem;
+      display: block;
+      color: #66ffcc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .profile-link:hover {
+      color: #ffcc00;
     }
   </style>
 </head>
@@ -66,16 +73,20 @@
     <a href="spotify.html">Spotify / Goblin M0D3</a>
   </nav>
   <main>
-    <h1>Goblin M0D3 – Music Portal</h1>
+    <h1>Goblin M0D3 – Music Feed</h1>
 
     <iframe class="youtube" src="https://www.youtube.com/embed/videoseries?list=PLiEexr1iIGuw90f4SuRpAofKKm9iNleP5" allowfullscreen></iframe>
 
-    <iframe class="spotify" src="https://open.spotify.com/embed/playlist/37i9dQZF1EpfhvqSkEo6zw?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe class="spotify" 
+      src="https://open.spotify.com/embed/playlist/3J3XAhw5KZEIPxhSEVClos?utm_source=generator" 
+      frameBorder="0" 
+      allowtransparency="true" 
+      allow="encrypted-media">
+    </iframe>
 
-    <p style="margin-top: 2rem;">
-      You can also view my full profile here:
-      <a href="https://open.spotify.com/user/eokg1jiqqcuoxty4afgpo196y" style="color: #66ff66;" target="_blank">Spotify – eokg1jiqqcuoxty4afgpo196y</a>
-    </p>
+    <a class="profile-link" href="https://open.spotify.com/user/eokg1jiqqcuoxty4afgpo196y" target="_blank">
+      🎧 View My Full Spotify Profile
+    </a>
   </main>
 </body>
 </html>
