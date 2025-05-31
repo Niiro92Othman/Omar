@@ -43,34 +43,23 @@
       gap: 2rem;
     }
     .blog-card {
-      display: flex;
-      gap: 1rem;
       background-color: #1a1a1a;
       border: 1px solid #333;
       border-radius: 10px;
-      overflow: hidden;
-    }
-    .blog-card img {
-      width: 150px;
-      height: auto;
-      object-fit: cover;
-    }
-    .blog-content {
       padding: 1rem;
     }
-    .blog-content h2 {
-      margin: 0 0 0.5rem 0;
-    }
-    .blog-content a {
+    .blog-card a {
       color: #66ff66;
       text-decoration: none;
       font-size: 1.2rem;
+      font-weight: bold;
     }
-    .blog-content a:hover {
+    .blog-card a:hover {
       color: #ff3333;
     }
-    .blog-content p {
+    .blog-card p {
       color: #aaa;
+      margin-top: 0.5rem;
     }
   </style>
 </head>
@@ -85,37 +74,36 @@
     <a href="reviews.html">Reviews</a>
     <a href="spotify.html">Spotify / Goblin M0D3</a>
   </nav>
-
   <main>
-    <h1>Latest Articles by Omar A. Othman</h1>
-    <div class="blog-list" id="blog-list">
-      <p>Loading your goblin knowledge drops...</p>
+    <h1>Latest Blog Posts</h1>
+    <div class="blog-list">
+
+      <div class="blog-card">
+        <a href="https://www.linkedin.com/pulse/how-leading-raids-world-warcraft-became-my-unofficial-omar-a-othman/" target="_blank">How Leading Raids in World of Warcraft Became My Unofficial MBA</a>
+        <p>A breakdown of leadership lessons learned through raid leading in WoW.</p>
+      </div>
+
+      <div class="blog-card">
+        <a href="https://www.linkedin.com/pulse/improvise-adapt-succeed-my-journey-omar-a-othman-famwf/" target="_blank">Improvise, Adapt, Succeed: My IT Journey</a>
+        <p>Reflections on adapting in IT and why chaos can be your best teacher.</p>
+      </div>
+
+      <div class="blog-card">
+        <a href="https://www.linkedin.com/pulse/charting-uncharted-waters-deep-technical-exploration-future-omar/" target="_blank">Charting Uncharted Waters: Future of Service Desk Strategy</a>
+        <p>A deep technical dive into scaling support ops, innovation, and end user experience.</p>
+      </div>
+
+      <div class="blog-card">
+        <a href="https://www.linkedin.com/pulse/list-essential-%25E1%25B6%25A0%25CA%25B3%25E1%25B5%2589%25E1%25B5%2589-software-your-windows-pc-omar-a-othman/" target="_blank">List of Essential Goblin Software for Windows</a>
+        <p>The software toolbox I install on every machine I touch. Tweaks, tools, and turbo boosts.</p>
+      </div>
+
+      <div class="blog-card">
+        <a href="https://www.linkedin.com/pulse/one-box-rule-them-all-truenas-homelab-media-security-omar-a-othman-euvcf/" target="_blank">One Box to Rule Them All: TrueNAS Homelab</a>
+        <p>A walkthrough of my home server project using TrueNAS SCALE for media and automation.</p>
+      </div>
+
     </div>
   </main>
-
-  <script>
-    fetch('articles.json')
-      .then(response => response.json())
-      .then(data => {
-        const container = document.getElementById('blog-list');
-        container.innerHTML = '';
-        data.forEach(article => {
-          const card = document.createElement('div');
-          card.className = 'blog-card';
-          card.innerHTML = `
-            <img src="${article.thumbnail}" alt="Thumbnail">
-            <div class="blog-content">
-              <h2><a href="${article.url}" target="_blank">${article.title}</a></h2>
-              <p>${article.description}</p>
-            </div>
-          `;
-          container.appendChild(card);
-        });
-      })
-      .catch(err => {
-        document.getElementById('blog-list').innerHTML = '<p style="color: red;">Failed to load articles.</p>';
-        console.error(err);
-      });
-  </script>
 </body>
 </html>
